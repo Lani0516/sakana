@@ -53,7 +53,7 @@ module.exports = {
                     { name: '使用用戶', value: `\`\`\`${interaction.member.user.tag}\`\`\``, inline: true },
                     { name: '使用原因', value: `\`\`\`${reason}\`\`\`` }
                 )
-                .setColor('#D37676')
+                .setColor('Red')
 
             await interaction.editReply({ embeds: [embed] })
         } catch (error) {

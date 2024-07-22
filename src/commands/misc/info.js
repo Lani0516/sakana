@@ -25,7 +25,7 @@ module.exports = {
                 { name: 'Source Code', value: '```https://github.com/Lani0516/sakana```' },
                 { name: 'Original Author', value: '```https://github.com/notunderctrl```'},
             )
-            .setColor('#EBC49F')
+            .setColor('Blue')
 
         interaction.editReply({ embeds: [embed] })
     },

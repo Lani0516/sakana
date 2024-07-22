@@ -15,7 +15,7 @@ module.exports = {
                 { name: 'Client', value: `\`\`\`${ping}ms\`\`\``, inline: true },
                 { name: 'Websocket', value: `\`\`\`${client.ws.ping}ms\`\`\``, inline: true },
             )
-            .setColor('#B0C5A4')
+            .setColor('Green')
 
         interaction.editReply({ embeds: [embed] })
     },

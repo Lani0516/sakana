@@ -17,7 +17,7 @@ module.exports = async (client, message) => {
             .setTitle(
                 "⚠️｜Work in progress."
             )
-            .setColor('#D37676')
+            .setColor('Red')
 
         // Link ➡️ fetch thumbnail, title, tag?, image
 
