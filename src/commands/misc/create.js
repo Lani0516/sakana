@@ -4,7 +4,7 @@ const logger = winston.loggers.get('defaultLogger')
 
 const { voiceCategoryId, voiceChannelPrefix, voiceStatesUpdateChannelId } = require('../../../config.json')
 
-const { Client, ApplicationCommandOptionType, PermissionsBitField, EmbedBuilder, ChannelType } = require('discord.js')
+const { ApplicationCommandOptionType, EmbedBuilder, ChannelType } = require('discord.js')
 
 module.exports = {
     callback: async (client, interaction) => {
