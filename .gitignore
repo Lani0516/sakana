@@ -2,8 +2,9 @@
 .env
 config.
 
-# macOS
+# OS
 .DS_Store
+.vscode
 
 # npm
 node_modules
