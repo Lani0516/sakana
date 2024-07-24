@@ -54,8 +54,10 @@ module.exports = {
                     await channel.setUserLimit(userLimit)
                 }
             }
+
+            logger.info(`"${interaction.member.user.displayName}" create a voice channel named "${channelName}" successfully！`)
         } catch (error) {
-            logger.error(`There is a error creating voice channel: ${error}`)
+            logger.error(`There was an error creating voice channel: ${error}`)
             return
         }
 

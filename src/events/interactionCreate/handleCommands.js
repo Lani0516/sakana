@@ -64,7 +64,9 @@ module.exports = async (client, interaction) => {
         }
 
         await commandObject.callback(client, interaction)
+
+        logger.info(`"${interaction.member.user.displayName}" cast a slash command "/${interaction.commandName}" successfully！`)
     } catch (error) {
-        logger.error(error)
+        logger.error(`There was an error handling slash commands: ${error}`)
     }
 }
