@@ -30,11 +30,20 @@ module.exports = async (client, message) => {
     // Gemini
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_TOKEN)
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" })
-    
-    const filePath = './chatHistory.json'
 
-    // TODO: Make this into a reusable utility
-    const historyList = JSON.parse(fs.readFileSync(filePath).toString())
+    // Log with memberId
+    const member = message.author
+    const memberId = member.id
+
+    const filePath = `./src/userChatCache/${memberId}.json`
+    let historyList
+    try {
+        // TODO: Make jsonUtils
+        historyList = JSON.parse(fs.readFileSync(filePath).toString())
+    } catch (error) {
+        logger.warn(`User "${message.author.displayName}" doesn't have cache file, creating one...`)
+        historyList = fs.writeFileSync(filePath, JSON.stringify([]))
+    }
 
     const chat = model.startChat({ history: historyList })
 

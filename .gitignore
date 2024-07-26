@@ -11,4 +11,4 @@ node_modules
 package-lock.json
 
 # log or temp files
-chatHistory.json
+/src/userChatCache/*
