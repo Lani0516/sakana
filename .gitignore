@@ -1,6 +1,6 @@
 # environmental variables
 .env
-config.
+config.json
 
 # OS
 .DS_Store
@@ -9,3 +9,6 @@ config.
 # npm
 node_modules
 package-lock.json
+
+# log or temp files
+chatHistory.json
